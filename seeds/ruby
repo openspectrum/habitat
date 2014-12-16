@@ -5,7 +5,10 @@
 ruby_versions=$(cat climates/ruby-versions)
 
 for ruby_version in $ruby_versions; do
-  ruby-install ruby $ruby_version
+  if ! test -d $HOME/.rubies/ruby-$ruby_version
+  then
+    ruby-install ruby $ruby_version
+  fi
 done
 
 exit 0
