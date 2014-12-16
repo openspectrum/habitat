@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# atom
+
+app_name="Atom.app"
+
+if utils/app-exists $app_name
+then
+  echo "$app_name already installed; skipping."
+  exit 0
+fi
+
+utils/download https://atom.io/download/mac
+
+unzip ~/Downloads/mac -d /Applications/
+
+rm ~/Downloads/mac
+
+exit 0
