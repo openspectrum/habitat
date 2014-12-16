@@ -20,6 +20,9 @@ seeds/git-config
 seeds/sqlite
 seeds/postgresql
 
+# node
+seeds/node
+
 # ruby
 seeds/ruby-install
 seeds/ruby
