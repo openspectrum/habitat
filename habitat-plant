@@ -2,9 +2,16 @@
 
 # habitat-plant
 
-# environment setup
+# environment & os setup
 seeds/env
 seeds/osx-ui
+seeds/osx-ssd
+seeds/osx-inputs
+seeds/osx-finder
+seeds/osx-dock-dash-mission-launch
+seeds/osx-screen
+seeds/osx-time-machine
+seeds/osx-spotlight
 
 # package management
 seeds/homebrew
@@ -28,8 +35,17 @@ seeds/node
 seeds/ruby-install
 seeds/ruby
 
+# shell management
+seeds/osx-terminal
+
 # editors
 seeds/vim
 seeds/atom
+
+# application configuration
+seeds/osx-mac-apps
+seeds/osx-safari-webkit
+seeds/osx-activity-monitor
+seeds/osx-disk-utility
 
 exit 0
