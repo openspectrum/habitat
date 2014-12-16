@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# habitat-seed
+
+seed_name=$1
+seed_script=$2
+
+seed_file="seeds/$seed_name"
+
+if test -x $seed_file
+then
+  echo "$seed_file already exists"
+  exit 1
+fi
+
+touch $seed_file
+chmod +x $seed_file
+
+echo "#!/bin/bash
+
+# $seed_name
+
+$seed_script" > $seed_file
+
+echo "Created new seed $seed_name"
+exit 0
