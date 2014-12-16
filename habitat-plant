@@ -16,6 +16,9 @@ seeds/tree
 seeds/git
 seeds/git-config
 
+# databases
+seeds/sqlite
+
 # ruby
 seeds/ruby-install
 
