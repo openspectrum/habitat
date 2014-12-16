@@ -4,6 +4,7 @@
 
 # environment setup
 seeds/env
+seeds/osx-ui
 
 # package management
 seeds/homebrew

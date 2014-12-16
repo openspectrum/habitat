@@ -41,3 +41,8 @@ Design principles
 ## Inspiration
 
 Much inspiration taken from @garybernhardt's [talk on Boundaries](https://www.destroyallsoftware.com/talks/boundaries).
+
+## Tasks
+
+- [ ] Set computer name (osx-ui)
+- [ ] Set custom desktop image (osx-ui)
