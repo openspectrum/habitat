@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # habitat-seed
 
@@ -16,7 +16,7 @@ fi
 touch $seed_file
 chmod +x $seed_file
 
-echo "#!/bin/bash
+echo "#!/usr/bin/env bash
 
 # $seed_name
 
