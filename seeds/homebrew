@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# homebrew
+
+if test -x `which brew`
+then
+  echo "Homebrew already installed; skipping."
+  exit 1
+fi
+
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+exit 0
