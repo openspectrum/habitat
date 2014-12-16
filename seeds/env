@@ -16,11 +16,10 @@ for var in NAME EMAIL; do
   echo -n "Enter your $var: "
   read input
 
-  echo "$var=\"$input\"" >> $env_file
+  echo "export $var=\"$input\"" >> $env_file
 done
 
+echo "Creating symlink to $env_file in $HOME"
 ln -s $env_file $HOME
-
-source $env_file
 
 exit 0
