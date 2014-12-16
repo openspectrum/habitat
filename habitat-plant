@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# habitat-plant
+
+# environment setup
+seeds/env
+
+# package management
+seeds/homebrew
+
+# utilities
+seeds/wget
+
+# git
+seeds/git
+seeds/git-config
+
+# applications
+seeds/atom
+
+exit 0
