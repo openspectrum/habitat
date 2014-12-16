@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+# ruby
+
+ruby_versions=$(cat climates/ruby-versions)
+
+for ruby_version in $ruby_versions; do
+  ruby-install ruby $ruby_version
+done
+
+exit 0

@@ -21,6 +21,7 @@ seeds/sqlite
 
 # ruby
 seeds/ruby-install
+seeds/ruby
 
 # editors
 seeds/vim
