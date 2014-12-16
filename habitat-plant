@@ -18,6 +18,7 @@ seeds/git-config
 
 # databases
 seeds/sqlite
+seeds/postgresql
 
 # ruby
 seeds/ruby-install

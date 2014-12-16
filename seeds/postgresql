@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+# postgresql
+
+if test -x `which postgres`
+then
+  echo "Postgres is already installed; skipping."
+  exit 1
+fi
+
+brew install postgresql
+
+# To have launchd start postgresql at login:
+ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents
+
+# Then to load postgresql now:
+launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
+
+# Create main database
+createdb $USER
