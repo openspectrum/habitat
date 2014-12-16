@@ -46,3 +46,4 @@ Much inspiration taken from @garybernhardt's [talk on Boundaries](https://www.de
 
 - [ ] Set computer name (osx-ui)
 - [ ] Set custom desktop image (osx-ui)
+- [ ] Map caps lock key to ctrl
