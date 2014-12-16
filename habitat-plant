@@ -16,6 +16,9 @@ seeds/tree
 seeds/git
 seeds/git-config
 
+# ruby
+seeds/ruby-install
+
 # editors
 seeds/vim
 seeds/atom
