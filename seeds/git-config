@@ -2,5 +2,19 @@
 
 # git-config
 
-git config --global user.name $NAME
-git config --global user.email $EMAIL
+source $HOME/.env
+
+gitconfig_file=`pwd`/climates/.gitconfig
+gitconfig_example=$gitconfig_file.example
+
+if ! test -f $gitconfig_file
+then
+  echo "Making $gitconfig_file from $gitconfig_example"
+  cp $gitconfig_example $gitconfig_file
+fi
+
+utils/replace-in-file "{{NAME}}" "$NAME" $gitconfig_file
+utils/replace-in-file "{{EMAIL}}" "$EMAIL" $gitconfig_file
+
+echo "Creating symlink to $gitconfig_file in $HOME"
+ln -s $gitconfig_file $HOME

@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# replace-in-file
+
+search_pattern=$1
+replace_pattern=$2
+file=$3
+
+temp_file=$file.tmp
+
+echo "Replacing $search_pattern with $replace_pattern in $file"
+sed -i .tmp "s/$search_pattern/$replace_pattern/g" $file
+
+if test $? -ne 0
+then
+  echo "Something went wrong. Check $temp_file."
+  exit 1
+fi
+
+rm $temp_file
+
+exit 0
