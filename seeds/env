@@ -3,6 +3,7 @@
 # env
 
 env_file=`pwd`/climates/.env
+env_example=$env_file.example
 
 if test -f $env_file
 then
@@ -10,14 +11,10 @@ then
   exit 1
 fi
 
-touch $env_file
+cp $env_example $env_file
 
-for var in NAME EMAIL; do
-  echo -n "Enter your $var: "
-  read input
-
-  echo "export $var=\"$input\"" >> $env_file
-done
+echo "Set your environment variables"
+vim $env_file
 
 echo "Creating symlink to $env_file in $HOME"
 ln -s $env_file $HOME
