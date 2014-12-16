@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# env
+
+env_file=`pwd`/climates/.env
+
+if test -f $env_file
+then
+  echo "$env_file already exists; skipping."
+  exit 1
+fi
+
+touch $env_file
+
+for var in NAME EMAIL; do
+  echo -n "Enter your $var: "
+  read input
+
+  echo "$var=\"$input\"" >> $env_file
+done
+
+ln -s $env_file $HOME
+
+source $env_file
+
+exit 0
