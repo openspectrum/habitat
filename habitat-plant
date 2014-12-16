@@ -16,7 +16,8 @@ seeds/tree
 seeds/git
 seeds/git-config
 
-# applications
+# editors
+seeds/vim
 seeds/atom
 
 exit 0
