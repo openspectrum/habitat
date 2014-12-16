@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# download
+
+download_url=$1
+
+cd ~/Downloads
+wget $download_url
+
+echo "$download_url downloaded to ~/Downloads."
+exit 0
