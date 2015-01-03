@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+
+# If using the symlink, set the directory appropriately
+if [ -L $0 ]
+then
+  this_file=$(readlink $0)
+else
+  this_file=$0
+fi
+
+# Set directory for habitat executable
+export HABITAT_BIN_DIR=$(cd `dirname $this_file`; pwd)
+
+# Set environment variable HABITAT_ROOT to the habitat source repo directory
+export HABITAT_ROOT=$(echo $HABITAT_BIN_DIR | grep -o "^/.*\/habitat")
+
+# Add lib/* executable files to PATH for all habitat executables
+export PATH=$HABITAT_ROOT/lib:$PATH
+
+# Valid subcommands live in ./libexec
+SUBCOMMANDS_DIR=$HABITAT_ROOT/libexec
+
+# Subcommands take the form "habitat-subcommand"
+SUBCOMMAND="$SUBCOMMANDS_DIR/habitat-$1"
+
+if test ! -e $SUBCOMMAND
+then
+  echo "Sorry, $SUBCOMMAND is not a valid habitat command"
+  echo "Valid commands are:"
+  ls $SUBCOMMANDS_DIR | grep -o "habitat-.*"
+  exit 1
+fi
+
+exec $SUBCOMMAND
