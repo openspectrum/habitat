@@ -2,26 +2,17 @@
 
 # osx-terminal
 #
-# Terminal
 # attribution/inspiration: https://mths.be/osx
 
-# Ask for the administrator password upfront
-sudo -v
-
-# Only use UTF-8 in Terminal.app
-defaults write com.apple.terminal StringEncodings -array 4
+require fonts
 
 # Use a modified version of the Solarized Dark theme by default in Terminal.app
-TERM_PROFILE='Solarized Dark';
-CURRENT_PROFILE="$(defaults read com.apple.terminal 'Default Window Settings')";
-if [ "${CURRENT_PROFILE}" != "${TERM_PROFILE}" ]; then
-  open "${HOME}/.habitat/climates/shell/${TERM_PROFILE}.terminal";
-  sleep 1; # Wait a bit to make sure the theme is loaded
-  defaults write com.apple.terminal 'Default Window Settings' -string "${TERM_PROFILE}";
-  defaults write com.apple.terminal 'Startup Window Settings' -string "${TERM_PROFILE}";
-fi;
+TERM_PROFILE='Solarized Dark'
+CURRENT_PROFILE="$(defaults read com.apple.terminal 'Default Window Settings')"
 
-# Enable “focus follows mouse” for Terminal.app and all X11 apps
-# i.e. hover over a window and start typing in it without clicking first
-#defaults write com.apple.terminal FocusFollowsMouse -bool true
-#defaults write org.x.X11 wm_ffm -bool true
+[ "$CURRENT_PROFILE" = "$TERM_PROFILE" ] && exit 0
+
+open "$HABITAT_ROOT/climates/Solarized Dark.terminal"
+sleep 1 # Wait a bit to make sure the theme is loaded
+
+echo "Open Terminal settings and set the Default and Startup profiles to Solarized Dark" >&2
