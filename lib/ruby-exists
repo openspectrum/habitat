@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+test -d $HOME/.rubies/ruby-$1

@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+type -t $1 > /dev/null && exit 0
+
+{
+  echo "$1 does not exist, so you'll want to install it."
+  echo "If there isn't already a seed, why not make one?"
+} >&2
+exit 1
