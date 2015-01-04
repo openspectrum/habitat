@@ -3,6 +3,9 @@
 # Allow aliases to be with sudo
 alias sudo="sudo "
 
+# Easily refresh the shell by sourcing .bash_profile
+alias refresh="source ~/.bash_profile"
+
 # Easier navigation: .., ..., ~ and -
 alias ..="cd .."
 alias ...="cd ../.."
@@ -25,6 +28,8 @@ alias gd="git diff"
 
 # List dir contents aliases
 # ref: http://ss64.com/osx/ls.html
+# Color
+alias ls="ls -G"
 # Long form no user group, color
 alias l="ls -oG"
 # Order by last modified, long form no user group, color
