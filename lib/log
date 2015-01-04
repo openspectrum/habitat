@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+seed=$1
+log_file=$HABITAT_ROOT/logs/$seed.log
+temp_file=/tmp/$seed
+
+touch $log_file
+touch $temp_file
+
+while read line; do
+  echo $line > $temp_file
+done
+
+test -s $temp_file && {
+  cat $temp_file >> $log_file
+  echo "Output of installing $seed written to $log_file"
+}
+
+rm $temp_file
