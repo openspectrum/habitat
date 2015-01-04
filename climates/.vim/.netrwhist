@@ -1,9 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/Users/tannerwelsh/Curricula/code-union/all-repos/bin'
-let g:netrw_dirhist_2='/Users/tanner/Projects/habitat'
-let g:netrw_dirhist_3='/Users/tanner/Projects/habitat/logs'
-let g:netrw_dirhist_4='/Users/tanner/Projects/habitat'
-let g:netrw_dirhist_5='/Users/tanner/Projects/habitat/climates'
-let g:netrw_dirhist_6='/Users/tanner/Projects/habitat'
-let g:netrw_dirhist_7='/Users/tanner/Projects/habitat/libexec'
