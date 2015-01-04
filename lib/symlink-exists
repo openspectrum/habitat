@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+file_name=$1
+
+source_file=$HABITAT_ROOT/climates/$file_name
+symlnk_file=$HOME/$file_name
+
+test $symlnk_file -ef $source_file

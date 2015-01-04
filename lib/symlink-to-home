@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+file_name=$1
+
+source_file=$HABITAT_ROOT/climates/$file_name
+
+symlink-exists $file_name && exit 0
+
+ln -sf $source_file $HOME
