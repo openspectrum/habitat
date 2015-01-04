@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+# inputrc
+
+INPUTRC=$HABITAT_ROOT/climates/.inputrc
+
+[ ~/.inputrc -ef $INPUTRC ] && exit 0
+
+ln -sf $INPUTRC $HOME
