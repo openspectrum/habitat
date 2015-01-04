@@ -2,4 +2,8 @@
 
 # sqlite
 
+require homebrew
+
+brew-exists sqlite && exit 0
+
 brew install sqlite

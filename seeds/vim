@@ -2,4 +2,8 @@
 
 # vim
 
+require homebrew
+
+brew-exists vim && exit 0
+
 brew install vim

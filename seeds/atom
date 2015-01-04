@@ -2,18 +2,11 @@
 
 # atom
 
-app_name="Atom.app"
+require wget
 
-if utils/app-exists $app_name
-then
-  echo "$app_name already installed; skipping."
-  exit 0
-fi
+app-exists "Atom.app" && exit 0
 
-utils/download https://atom.io/download/mac
-
-unzip ~/Downloads/mac -d /Applications/
-
-rm ~/Downloads/mac
-
-exit 0
+cd ~/Downloads
+wget https://atom.io/download/mac
+unzip mac -d /Applications/
+rm mac

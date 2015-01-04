@@ -2,4 +2,8 @@
 
 # tree
 
+require homebrew
+
+exists tree && exit 0
+
 brew install tree
