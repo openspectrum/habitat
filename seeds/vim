@@ -4,6 +4,6 @@
 
 require homebrew
 
-brew-exists vim && exit 0
-
-brew install vim
+brew-exists vim || brew install vim
+symlink-exists .vim || symlink-to-home .vim
+symlink-exists .vimrc || symlink-to-home .vimrc
