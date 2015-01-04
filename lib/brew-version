@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+require json-tools
+
+brew-exists $1 \
+  && brew info --json=v1 $1 \
+  | jq '.[0]["installed"][0]["version"]'

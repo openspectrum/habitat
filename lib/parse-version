@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+if [ $# -eq 1 ]
+then
+  version=$1
+else
+  read version
+fi
+
+echo $version | egrep -o "\d+\.\d+(\.\d+)*"
