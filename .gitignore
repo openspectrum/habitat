@@ -5,3 +5,4 @@ climates/.env
 climates/.gitconfig
 
 logs/*
+climates/.vim/.netrwhist
