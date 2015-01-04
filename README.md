@@ -46,8 +46,7 @@ Much inspiration taken from @garybernhardt's [talk on Boundaries](https://www.de
 
 ## Tasks
 
-- [ ] Set computer name (osx-ui)
-- [ ] Set custom desktop image (osx-ui)
-- [ ] Map caps lock key to ctrl
 - [ ] Write directory structure setup
 - [ ] Write some functions like [these](https://github.com/mathiasbynens/dotfiles/blob/master/.functions)
+- [ ] Move climates/.vim into git submodule
+- [ ] Keep a snapshot of the habitat in climates/.habitat (symlinked, of course) - this should be something like a Gemfile.lock or package.json
