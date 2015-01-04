@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-
-# shell-options
-
-OPTIONS=$HABITAT_ROOT/climates/.bash_options
-
-[ ~/.bash_options -ef $OPTIONS ] && exit 0
-
-ln -sf $OPTIONS $HOME

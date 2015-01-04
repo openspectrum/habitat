@@ -3,21 +3,16 @@
 # shell-profile
 
 require env
-require shell-options
-require shell-paths
-require shell-config
-require shell-aliases
-require shell-completion
-require shell-prompt
 
-PROFILE=$HABITAT_ROOT/climates/.bash_profile
-RC_FILE=$HABITAT_ROOT/climates/.bashrc
-
-[ ~/.bash_profile -ef $PROFILE ] \
-  && [ ~/.bashrc -ef $RC_FILE ] \
-  && exit 0
-
-ln -sf $PROFILE $HOME
-ln -sf $RC_FILE $HOME
+for file in .bash_options \
+            .bash_paths \
+            .bash_config \
+            .bash_aliases \
+            .bash_completion \
+            .bash_prompt \
+            .bash_profile \
+            .bashrc; do
+              symlink-exists $file || symlink-to-home $file
+            done
 
 source ~/.bash_profile
