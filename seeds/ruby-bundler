@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# ruby-bundler
+
+require ruby
+
+(gem list | grep -o bundler) || gem install bundler
