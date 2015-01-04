@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+# xcode-cli-tools
+
+xcode-select --install
