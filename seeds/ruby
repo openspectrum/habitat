@@ -2,13 +2,12 @@
 
 # ruby
 
-ruby_versions=$(cat climates/ruby-versions)
+require ruby-install
+
+ruby_versions="1.9.3-p547 2.0.0-p576 2.1.2 2.1.3"
 
 for ruby_version in $ruby_versions; do
-  if ! test -d $HOME/.rubies/ruby-$ruby_version
-  then
+  ruby-exists $ruby_version || {
     ruby-install ruby $ruby_version
-  fi
+  }
 done
-
-exit 0
