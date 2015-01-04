@@ -4,6 +4,7 @@
 	co = checkout
 	di = diff
 	dc = diff --cached
+	l = log --oneline --graph
 	amend = commit --amend
 	aa = add --all
 	ff = merge --ff-only
@@ -31,6 +32,8 @@
 	h = !git head
 	r = !GIT_NO_PAGER=1 git l -30
 	ra = !git r --all
+[branch]
+	autosetuprebase = always
 [core]
 	excludesfile = ~/.gitignore
 	editor = vim
@@ -39,6 +42,8 @@
 	status = auto
 	branch = auto
 	ui = true
+[credential]
+	helper = osxkeychain
 [help]
 	autocorrect = 1
 [merge]
