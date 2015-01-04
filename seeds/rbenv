@@ -12,5 +12,6 @@ ruby_versions="$(echo $ruby_install_dir/ruby-*)"
 rbenv_version_dir="$HOME/.rbenv/versions/"
 
 for ruby_version in $ruby_versions; do
-  ln -sf $ruby_version $rbenv_version_dir
+  without_prefix=${ruby_version##*ruby-}
+  ln -sf $ruby_version $rbenv_version_dir/$without_prefix
 done
