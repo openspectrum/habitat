@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+# google-chrome
+
+app-exists "Google Chrome.app" && exit 0
+
+echo "Go download Google Chrome and install it." >&2
+
+open "http://www.google.com/chrome/"
