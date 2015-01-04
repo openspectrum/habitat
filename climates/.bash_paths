@@ -2,6 +2,7 @@
 
 CUSTOM_USER_BIN=~/.bin
 
-PATH=$CUSTOM_USER_BIN:$PATH
-
-export PATH
+(echo $PATH | grep $CUSTOM_USER_BIN > /dev/null) || {  
+  PATH=$CUSTOM_USER_BIN:$PATH
+  export PATH
+}
