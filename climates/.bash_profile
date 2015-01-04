@@ -1,6 +1,6 @@
 #
 # ENV SETTINGS
-# ----------------
+# ------------
 source ~/.env
 
 #
@@ -15,12 +15,12 @@ source ~/.bash_paths
 
 #
 # SHELL CONFIG
-# -------------
+# ------------
 source ~/.bash_config
 
 #
 # COMMAND ALIASES
-# -------------
+# ---------------
 source ~/.bash_aliases
 
 #
