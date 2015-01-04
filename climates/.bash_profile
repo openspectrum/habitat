@@ -28,6 +28,9 @@ source ~/.bash_aliases
 # ------------------
 source ~/.bash_completion
 
+# homebrew-installed bash completion script
+. $(brew --prefix)/etc/bash_completion
+
 #
 # PROMPT SETTINGS
 # ---------------

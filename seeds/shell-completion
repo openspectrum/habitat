@@ -4,6 +4,7 @@
 
 require homebrew
 require git
+require bash-completion
 
 COMPLETION=$HABITAT_ROOT/climates/.bash_completion
 
