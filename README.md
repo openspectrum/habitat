@@ -40,6 +40,8 @@ Design principles
 
 ## Inspiration
 
+Many thanks to @mathiasbynens, @holman, and @necolas.
+
 Much inspiration taken from @garybernhardt's [talk on Boundaries](https://www.destroyallsoftware.com/talks/boundaries).
 
 ## Tasks
@@ -48,3 +50,4 @@ Much inspiration taken from @garybernhardt's [talk on Boundaries](https://www.de
 - [ ] Set custom desktop image (osx-ui)
 - [ ] Map caps lock key to ctrl
 - [ ] Write directory structure setup
+- [ ] Write some functions like [these](https://github.com/mathiasbynens/dotfiles/blob/master/.functions)
