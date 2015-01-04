@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+for seed in $@; do
+  habitat plant $seed
+done
