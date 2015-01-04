@@ -28,10 +28,18 @@ source ~/.bash_aliases
 # ------------------
 source ~/.bash_completion
 
-# homebrew-installed bash completion script
-. $(brew --prefix)/etc/bash_completion
-
 #
 # PROMPT SETTINGS
 # ---------------
 source ~/.bash_prompt
+
+#
+# SOFTWARE CONFIGURATION
+# ----------------------
+
+# Homebrew bash completion
+. $(brew --prefix)/etc/bash_completion
+
+# Set up rbenv
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
