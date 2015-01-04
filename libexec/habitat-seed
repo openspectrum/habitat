@@ -7,7 +7,7 @@ seed_script=$2
 
 seed_file="seeds/$seed_name"
 
-[-x $seed_file ] && {
+[ -x $seed_file ] && {
   echo "$seed_file already exists"
   exit 1
 }
