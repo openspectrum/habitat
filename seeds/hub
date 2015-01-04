@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# hub
+
+brew-exists hub && exit 0
+
+brew install hub

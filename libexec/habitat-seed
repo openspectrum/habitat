@@ -3,7 +3,9 @@
 # habitat-seed
 
 seed_name=$1
-seed_script=$2
+
+shift 1
+seed_script=$@
 
 seed_file="seeds/$seed_name"
 
