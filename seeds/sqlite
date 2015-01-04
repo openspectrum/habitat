@@ -4,6 +4,5 @@
 
 require homebrew
 
-brew-exists sqlite && exit 0
-
-brew install sqlite
+brew-exists sqlite || brew install sqlite
+symlink-exists .sqliterc || symlink-to-home .sqliterc
