@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+# shell-config
+
+CONFIG=$HABITAT_ROOT/climates/.bash_config
+
+[ ~/.bash_config -ef $CONFIG ] && exit 0
+
+ln -sf $CONFIG $HOME

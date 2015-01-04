@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+# shell-aliases
+
+ALIASES=$HABITAT_ROOT/climates/.bash_aliases
+
+[ ~/.bash_aliases -ef $ALIASES ] && exit 0
+
+ln -sf $ALIASES $HOME

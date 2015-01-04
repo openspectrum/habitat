@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+# shell-profile
+
+require env
+require shell-options
+require shell-paths
+require shell-config
+require shell-aliases
+require shell-completion
+require shell-prompt
+
+PROFILE=$HABITAT_ROOT/climates/.bash_profile
+RC_FILE=$HABITAT_ROOT/climates/.bashrc
+
+[ ~/.bash_profile -ef $PROFILE ] \
+  && [ ~/.bashrc -ef $RC_FILE ] \
+  && exit 0
+
+ln -sf $PROFILE $HOME
+ln -sf $RC_FILE $HOME
+
+source ~/.bash_profile

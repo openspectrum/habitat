@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+# shell-paths
+
+PATHS=$HABITAT_ROOT/climates/.bash_paths
+
+[ ~/.bash_paths -ef $PATHS ] && exit 0
+
+ln -sf $PATHS $HOME

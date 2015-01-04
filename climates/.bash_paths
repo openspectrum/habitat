@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+CUSTOM_USER_BIN=~/.bin
+
+PATH=$CUSTOM_USER_BIN:$PATH
+
+export PATH

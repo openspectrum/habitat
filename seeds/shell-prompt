@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+# shell-prompt
+
+PROMPT=$HABITAT_ROOT/climates/.bash_prompt
+
+[ ~/.bash_prompt -ef $PROMPT ] && exit 0
+
+ln -sf $PROMPT $HOME
