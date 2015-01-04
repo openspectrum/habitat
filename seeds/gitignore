@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+# gitignore
+
+IGNORE_FILE=$HABITAT_ROOT/climates/.gitignore
+
+[ ~/.gitignore -ef $IGNORE_FILE ] && exit 0
+
+ln -sf $IGNORE_FILE $HOME
