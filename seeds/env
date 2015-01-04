@@ -7,23 +7,16 @@ env_file=$HABITAT_ROOT/climates/.env
 touch $env_file
 source $env_file
 
-changed=false
-
 test -n "$NAME" || {
   echo -n "Enter your name and press RETURN: " >&2
   read name
   echo "export NAME='$name'" >> $env_file
-  changed=true
 }
 
 test -n "$EMAIL" || {
   echo -n "Enter your email and press RETURN: " >&2
   read email
   echo "export EMAIL='$email'" >> $env_file
-  changed=true
 }
 
-test $changed = true && {
-  echo "Creating symlink to $env_file in $HOME"
-  ln -sf $env_file $HOME
-}
+symlink-exists .env || symlink-to-home .env
