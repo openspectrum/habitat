@@ -14,8 +14,13 @@ export HABITAT_BIN_DIR=$(cd `dirname $this_file`; pwd)
 # Set environment variable HABITAT_ROOT to the habitat source repo directory
 export HABITAT_ROOT=$(echo $HABITAT_BIN_DIR | grep -o "^/.*\/habitat")
 
+# Add own directory to PATH
+PATH=$HABITAT_BIN_DIR:$PATH
+
 # Add lib/* executable files to PATH for all habitat executables
-export PATH=$HABITAT_ROOT/lib:$PATH
+PATH=$HABITAT_ROOT/lib:$PATH
+
+export PATH
 
 # Valid subcommands live in ./libexec
 SUBCOMMANDS_DIR=$HABITAT_ROOT/libexec
@@ -31,4 +36,9 @@ then
   exit 1
 fi
 
-exec $SUBCOMMAND
+# Remove initial parameters
+shift 1
+
+# Run all commands from HABITAT_ROOT
+cd $HABITAT_ROOT
+exec $SUBCOMMAND $@

@@ -7,11 +7,10 @@ seed_script=$2
 
 seed_file="seeds/$seed_name"
 
-if test -x $seed_file
-then
+[-x $seed_file ] && {
   echo "$seed_file already exists"
   exit 1
-fi
+}
 
 touch $seed_file
 chmod +x $seed_file

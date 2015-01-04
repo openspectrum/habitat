@@ -1,51 +1,28 @@
 #!/usr/bin/env bash
 
-# habitat-plant
+[ $# -eq 0 ] && {
+  echo "Specify a seed to plant"
+  echo "Or, to plant all the seeds, run 'habitat plant all'"
+  echo
+  echo "Usage:"
+  echo "  habitat plant <seed>"
+  exit 1
+}
 
-# environment & os setup
-seeds/env
-seeds/osx-ui
-seeds/osx-ssd
-seeds/osx-inputs
-seeds/osx-finder
-seeds/osx-dock-dash-mission-launch
-seeds/osx-screen
-seeds/osx-time-machine
-seeds/osx-spotlight
+[ $1 == "all" ] && {
+  for seed in ./seeds/*; do
+    $seed
+  done
+  exit 0
+}
 
-# package management
-seeds/homebrew
+SEED=$1
 
-# utilities
-seeds/wget
-seeds/tree
+[ ! -x ./seeds/$SEED ] && {
+  echo "Error: seed $SEED doesn't exist"
+  echo "To create it, run 'habitat seed $SEED'"
+  exit 1
+}
 
-# git
-seeds/git
-seeds/git-config
-
-# databases
-seeds/sqlite
-seeds/postgresql
-
-# node
-seeds/node
-
-# ruby
-seeds/ruby-install
-seeds/ruby
-
-# shell management
-seeds/osx-terminal
-
-# editors
-seeds/vim
-seeds/atom
-
-# application configuration
-seeds/osx-mac-apps
-seeds/osx-safari-webkit
-seeds/osx-activity-monitor
-seeds/osx-disk-utility
-
-exit 0
+# Log script output to own log file
+exec ./seeds/$SEED | log $SEED
