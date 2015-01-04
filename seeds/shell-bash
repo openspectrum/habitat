@@ -1,0 +1,23 @@
+#!/usr/bin/env sh
+
+# shell-bash
+
+require bash
+
+bash_executable=$(which bash)
+
+installed_bash_version=$(brew-version bash | parse-version)
+current_bash_version=$(parse-version $BASH_VERSION)
+
+[ $installed_bash_version = $current_bash_version ] && exit 0
+
+has-shell $bash_executable || {
+  echo "Adding $bash_executable to /etc/shells" >&2
+  sudo -v
+  echo $bash_executable | sudo tee -a /etc/shells
+}
+
+sudo -v
+chsh -s $bash_executable
+
+echo "NOTE: you must start a new shell session for changes to take effect."

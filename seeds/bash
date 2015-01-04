@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+# bash
+
+require homebrew
+
+brew-exists bash && exit 0
+
+brew install bash

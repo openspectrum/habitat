@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+cat /etc/shells | grep -o "^$1$"
