@@ -2,21 +2,28 @@
 
 # env
 
-env_file=`pwd`/climates/.env
-env_example=$env_file.example
+env_file=$HABITAT_ROOT/climates/.env
 
-if test -f $env_file
-then
-  echo "$env_file already exists; skipping."
-  exit 1
-fi
+touch $env_file
+source $env_file
 
-cp $env_example $env_file
+changed=false
 
-echo "Set your environment variables"
-vim $env_file
+test -n "$NAME" || {
+  echo -n "Enter your name and press RETURN: " >&2
+  read name
+  echo "export NAME='$name'" >> $env_file
+  changed=true
+}
 
-echo "Creating symlink to $env_file in $HOME"
-ln -s $env_file $HOME
+test -n "$EMAIL" || {
+  echo -n "Enter your email and press RETURN: " >&2
+  read email
+  echo "export EMAIL='$email'" >> $env_file
+  changed=true
+}
 
-exit 0
+test $changed = true && {
+  echo "Creating symlink to $env_file in $HOME"
+  ln -sf $env_file $HOME
+}
