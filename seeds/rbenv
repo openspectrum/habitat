@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+# rbenv
+
+require ruby
+
+brew-exists rbenv || brew install rbenv
+brew-exists ruby-build || brew install ruby-build
+
+ruby_install_dir="$HOME/.rubies"
+ruby_versions="$(echo $ruby_install_dir/ruby-*)"
+rbenv_version_dir="$HOME/.rbenv/versions/"
+
+for ruby_version in $ruby_versions; do
+  ln -sf $ruby_version $rbenv_version_dir
+done
