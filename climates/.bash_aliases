@@ -15,7 +15,6 @@ alias -- -="cd -"
 # Common commands
 alias g="git"
 alias h="history"
-alias j="jobs"
 
 # Git commands
 alias gst="git status"

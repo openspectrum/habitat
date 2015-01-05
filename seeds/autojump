@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+# autojump
+
+brew-exists autojump || brew install autojump
+
+cat ~/.bash_profile | egrep -o "(source|\.) .*\/autojump.sh" || {
+  echo "Autojump not configured." >&2
+  echo "Follow instructions in 'brew info autojump'." >&2
+  exit 1
+}

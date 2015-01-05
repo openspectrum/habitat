@@ -43,3 +43,5 @@ source ~/.bash_prompt
 # Set up rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
+# Load autojump
+[[ -s $(brew --prefix)/etc/autojump.sh ]] && . $(brew --prefix)/etc/autojump.sh
