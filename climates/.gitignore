@@ -1,4 +1,6 @@
-# global osx gitignore
+#
+# GLOBAL OSX GITIGNORE
+# --------------------
 #
 # source: https://github.com/github/gitignore/blob/master/Global/OSX.gitignore
 
@@ -23,3 +25,10 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+#
+# COMMON IGNORED FILETYPES
+# ------------------------
+
+# Vim
+.swp
