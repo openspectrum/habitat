@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+# mongodb
+
+brew-exists mongodb \
+&& (ls ~/Library/LaunchAgents/ | grep -o mongodb) \
+|| {
+  brew install mongodb
+
+  # Start mongodb at login
+  ln -sfv /usr/local/opt/mongodb/*.plist ~/Library/LaunchAgents
+
+  # Start the database now
+  launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mongodb.plist
+}
