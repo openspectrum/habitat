@@ -8,6 +8,7 @@ set expandtab
 set number
 set clipboard=unnamed
 set path=$PWD/**
+set backspace=2
 
 " --------
 " PATHOGEN
