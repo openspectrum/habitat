@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# rspec
+
+(gem list | grep -o rspec) || gem install rspec
+
+symlink-exists .rspec || symlink-to-home .rspec
