@@ -25,6 +25,9 @@ alias gr="git reset"
 alias gl="git log"
 alias gd="git diff"
 
+# Alias hub to git
+eval "$(hub alias -s)"
+
 # List dir contents aliases
 # ref: http://ss64.com/osx/ls.html
 # Color

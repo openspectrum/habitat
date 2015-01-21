@@ -2,6 +2,8 @@
 
 # hub
 
-brew-exists hub && exit 0
-
-brew install hub
+brew-exists hub || brew install hub
+(cat ~/.bash_aliases | grep -o "hub alias -s") || {
+  echo "Add line 'eval \"\$(hub alias -s)\"' to .bash_aliases" >&2
+  exit 1
+}
