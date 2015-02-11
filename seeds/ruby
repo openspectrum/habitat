@@ -5,7 +5,7 @@
 require ruby-install
 
 ruby_install_dir="$HOME/.rubies"
-ruby_versions="1.9.3-p547 2.0.0-p576 2.1.1 2.1.2 2.1.3 2.2.0"
+ruby_versions="1.9.3-p484 1.9.3-p547 2.0.0-p576 2.1.1 2.1.2 2.1.3 2.2.0"
 
 for ruby_version in $ruby_versions; do
   ruby-exists $ruby_version || {
