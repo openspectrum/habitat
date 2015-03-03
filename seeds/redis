@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# redis
+
+require homebrew
+
+brew-exists redis && exit 0
+
+brew install redis
+
