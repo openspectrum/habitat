@@ -45,3 +45,7 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # Load autojump
 [[ -s $(brew --prefix)/etc/autojump.sh ]] && . $(brew --prefix)/etc/autojump.sh
+
+# Configure nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
