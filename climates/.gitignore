@@ -43,3 +43,9 @@ Thumbs.dbp
 
 # Vim
 *.swp
+
+# GitHub pages #
+################
+.sass-cache
+_site
+.jekyll-metadata
