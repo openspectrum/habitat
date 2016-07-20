@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# python
+
+require homebrew
+
+brew-exists python || brew install python
