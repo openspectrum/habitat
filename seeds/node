@@ -2,8 +2,7 @@
 
 # node
 
-require homebrew
-
 exists node && exit 0
 
+require homebrew
 brew install node
