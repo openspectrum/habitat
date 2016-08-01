@@ -25,4 +25,4 @@ SEED=$1
 }
 
 # Log script output to own log file
-exec ./seeds/$SEED | log $SEED
+exec ./seeds/$SEED
