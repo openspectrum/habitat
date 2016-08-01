@@ -1,8 +1,14 @@
 #!/usr/bin/env bash
 
 CUSTOM_USER_BIN=~/.bin
+HEROKU_PATH=/usr/local/heroku/bin
 
-(echo $PATH | grep $CUSTOM_USER_BIN > /dev/null) || {  
+(echo $PATH | grep $CUSTOM_USER_BIN > /dev/null) || {
   PATH=$CUSTOM_USER_BIN:$PATH
-  export PATH
 }
+
+(echo $PATH | grep $HEROKU_PATH > /dev/null) || {
+  PATH=$PATH:$HEROKU_PATH
+}
+
+export PATH
