@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+# rethinkdb
+
+brew-exists rethinkdb && exit 0
+
+require homebrew
+brew install rethinkdb
+

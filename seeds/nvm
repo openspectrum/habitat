@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# nvm
+
+exists nvm && exit 0
+
+wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.31.3/install.sh | bash
