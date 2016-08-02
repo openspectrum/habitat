@@ -4,5 +4,8 @@
 
 exists node && exit 0
 
-require homebrew
-brew install node
+require nvm
+
+nvm install v0.12.7
+nvm install v4.4.7
+nvm install v6.3.1
