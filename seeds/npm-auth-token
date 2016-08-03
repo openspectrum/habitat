@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+# npm
+
+test -n "$NPM_AUTH_TOKEN" || {
+  echo "NPM_AUTH_TOKEN is not set."
+  echo "Log into npmjs.org to create one (to be stored at $HOME/.npmrc)"
+  echo ""
+  echo "Run this command to login:"
+  echo "$ npm login"
+  exit 1
+}

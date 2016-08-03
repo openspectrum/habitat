@@ -53,3 +53,6 @@ export NVM_DIR="$HOME/.nvm"
 
 # Node config
 export NODE_ENV=development
+
+# NPM login config
+export NPM_AUTH_TOKEN=$(cat $HOME/.npmrc | grep _authToken | cut -d '=' -f2)
