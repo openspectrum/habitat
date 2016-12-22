@@ -2,6 +2,7 @@
 
 CUSTOM_USER_BIN=~/.bin
 HEROKU_PATH=/usr/local/heroku/bin
+LOCAL_BIN=~/.local/bin # used by stack-installed (Haskell) binaries
 
 (echo $PATH | grep $CUSTOM_USER_BIN > /dev/null) || {
   PATH=$CUSTOM_USER_BIN:$PATH
@@ -9,6 +10,10 @@ HEROKU_PATH=/usr/local/heroku/bin
 
 (echo $PATH | grep $HEROKU_PATH > /dev/null) || {
   PATH=$PATH:$HEROKU_PATH
+}
+
+(echo $PATH | grep $LOCAL_BIN > /dev/null) || {
+  PATH=$PATH:$LOCAL_BIN
 }
 
 export PATH
