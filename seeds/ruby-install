@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-
-# ruby-install
-
-require homebrew
-
-brew-exists ruby-install && exit 0
-
-brew install ruby-install

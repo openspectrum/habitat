@@ -27,6 +27,7 @@ brew "libyaml"
 brew "makedepend"
 brew "mongodb", restart_service: true
 brew "neo4j", restart_service: true
+brew "nvm"
 brew "sqlite"
 brew "python"
 brew "postgresql", restart_service: true
@@ -41,5 +42,7 @@ brew "vim"
 brew "watchman"
 brew "wget"
 brew "xz"
+cask "atom"
 cask "cakebrew"
 cask "keycastr"
+cask "google-chrome"

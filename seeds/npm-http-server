@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-
-# npm-http-server
-
-require node
-
-npm install http-server -g
-

@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-
-# vim
-
-require homebrew
-
-brew-exists vim || brew install vim
-symlink-exists .vim || symlink-to-home .vim
-symlink-exists .vimrc || symlink-to-home .vimrc

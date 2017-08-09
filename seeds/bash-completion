@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-
-# bash-completion
-
-brew-exists bash-completion && exit 0
-
-brew install bash-completion

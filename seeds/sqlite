@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-
-# sqlite
-
-require homebrew
-
-brew-exists sqlite || brew install sqlite
-symlink-exists .sqliterc || symlink-to-home .sqliterc

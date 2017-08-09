@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-
-# tree
-
-require homebrew
-
-exists tree && exit 0
-
-brew install tree

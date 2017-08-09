@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-
-# ruby-pow
-
-[ -e ~/.pow ] || {
-  curl get.pow.cx | sh
-}

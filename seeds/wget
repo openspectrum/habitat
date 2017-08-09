@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-
-# wget
-
-require homebrew
-
-exists wget && exit 0
-
-brew install wget

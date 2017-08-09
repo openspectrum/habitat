@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-
-# json-tools
-
-require homebrew
-
-exists jq && exit 0
-
-brew install jq

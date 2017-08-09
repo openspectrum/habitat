@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-
-# git
-
-brew-exists git && exit 0
-
-brew install git
