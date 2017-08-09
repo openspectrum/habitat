@@ -40,11 +40,17 @@ source ~/.bash_prompt
 # Homebrew bash completion
 . $(brew --prefix)/etc/bash_completion
 
+# Set inbox folder
+export INBOX=~/Dropbox/_in/
+
 # Set up rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # Load autojump
 [[ -s $(brew --prefix)/etc/autojump.sh ]] && . $(brew --prefix)/etc/autojump.sh
+
+# NPM login config
+export NPM_AUTH_TOKEN=$(cat $HOME/.npmrc | grep _authToken | cut -d '=' -f2)
 
 # Configure nvm
 export NVM_DIR="$HOME/.nvm"
@@ -54,5 +60,5 @@ export NVM_DIR="$HOME/.nvm"
 # Node config
 export NODE_ENV=development
 
-# NPM login config
-export NPM_AUTH_TOKEN=$(cat $HOME/.npmrc | grep _authToken | cut -d '=' -f2)
+PATH="$PATH:./node_modules/.bin"; export PATH
+[[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
