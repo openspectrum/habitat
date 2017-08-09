@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+# brewfile
+
+symlink-exists .Brewfile || symlink-to-home .Brewfile
