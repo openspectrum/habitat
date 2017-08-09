@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# atom-packages
+
+packages_file=$HABITAT_ROOT/climates/.atom_packages
+
+apm install --packages-file $packages_file
