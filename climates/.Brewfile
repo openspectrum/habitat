@@ -3,6 +3,7 @@ tap "homebrew/bundle"
 tap "homebrew/core"
 tap "homebrew/dupes"
 tap "homebrew/services"
+cask "java" # pre-req for neo4j
 brew "autoconf"
 brew "autojump"
 brew "bash"
@@ -25,14 +26,14 @@ brew "libevent"
 brew "libffi"
 brew "libyaml"
 brew "makedepend"
-brew "mongodb", restart_service: true
-brew "neo4j", restart_service: true
+brew "mongodb", restart_service: :changed
+brew "neo4j", restart_service: :changed
 brew "nvm"
 brew "sqlite"
 brew "python"
 brew "postgresql", restart_service: true
 brew "rbenv"
-brew "redis", restart_service: true
+brew "redis", restart_service: :changed
 brew "ruby"
 brew "ruby-install"
 brew "sphinx-doc"
@@ -44,5 +45,8 @@ brew "wget"
 brew "xz"
 cask "atom"
 cask "cakebrew"
+cask "dropbox"
 cask "keycastr"
 cask "google-chrome"
+cask "postico"
+cask "spotify"
