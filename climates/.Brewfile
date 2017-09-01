@@ -28,7 +28,6 @@ brew "libyaml"
 brew "makedepend"
 brew "mongodb", restart_service: :changed
 brew "neo4j", restart_service: :changed
-brew "nvm"
 brew "sqlite"
 brew "python"
 brew "postgresql", restart_service: true
