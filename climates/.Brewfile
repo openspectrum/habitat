@@ -3,7 +3,9 @@ tap "homebrew/bundle"
 tap "homebrew/core"
 tap "homebrew/dupes"
 tap "homebrew/services"
+
 cask "java" # pre-req for neo4j
+
 brew "autoconf"
 brew "autojump"
 brew "bash"
@@ -42,22 +44,33 @@ brew "vim"
 brew "watchman"
 brew "wget"
 brew "xz"
+
+# dev apps
 cask "atom"
 cask "caffeine"
 cask "cakebrew"
+cask "kite"
+cask "lingo"
+cask "mancy"
+cask "postico"
+cask "screenhero"
+
+# general tools
 cask "dropbox"
 cask "duet"
 cask "gitbook-editor"
 cask "google-chrome"
 cask "keycastr"
-cask "kite"
-cask "lingo"
-cask "mancy"
 cask "muzzle"
 cask "notion"
 cask "openemu"
-cask "postico"
-cask "screenhero"
 cask "sketch-toolbox"
 cask "skype"
 cask "spotify"
+
+# quick look plugins
+cask "qlcolorcode"
+cask "qlmarkdown"
+cask "qlstephen"
+cask "quicklook-csv"
+cask "quicklook-json"
