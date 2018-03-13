@@ -34,8 +34,6 @@ eval "$(hub alias -s)"
 alias ls="ls -G"
 # Long form no user group, color
 alias l="ls -oG"
-# Order by last modified, long form no user group, color
-alias lt="ls -toG"
 # List all except . and ..., color, mark file types
 alias lsa="ls -AGF"
 # List all except . and ..., color, mark file types, long form no user group, file size
