@@ -1,7 +1,6 @@
 tap "caskroom/cask"
 tap "homebrew/bundle"
 tap "homebrew/core"
-tap "homebrew/dupes"
 tap "homebrew/services"
 
 cask "java" # pre-req for neo4j
