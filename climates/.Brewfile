@@ -52,7 +52,6 @@ cask "kite"
 cask "lingo"
 cask "mancy"
 cask "postico"
-cask "screenhero"
 
 # general tools
 cask "dropbox"
