@@ -3,6 +3,7 @@
 CUSTOM_USER_BIN=~/.bin
 HEROKU_PATH=/usr/local/heroku/bin
 LOCAL_BIN=~/.local/bin # used by stack-installed (Haskell) binaries
+YARN_PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin"
 
 (echo $PATH | grep $CUSTOM_USER_BIN > /dev/null) || {
   PATH=$CUSTOM_USER_BIN:$PATH
@@ -14,6 +15,10 @@ LOCAL_BIN=~/.local/bin # used by stack-installed (Haskell) binaries
 
 (echo $PATH | grep $LOCAL_BIN > /dev/null) || {
   PATH=$PATH:$LOCAL_BIN
+}
+
+(echo $PATH | grep $YARN_PATH > /dev/null) || {
+  PATH=$PATH:$YARN_PATH
 }
 
 export PATH
