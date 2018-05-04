@@ -58,5 +58,4 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Node config
-export NODE_ENV=development
 PATH="$PATH:./node_modules/.bin"; export PATH
