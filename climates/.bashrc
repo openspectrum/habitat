@@ -59,3 +59,9 @@ export NVM_DIR="$HOME/.nvm"
 
 # Node config
 PATH="$PATH:./node_modules/.bin"; export PATH
+
+# Mongo Config
+PATH="/usr/local/opt/mongodb-community@3.6/bin:$PATH"; export PATH
+
+# Yarn config
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
